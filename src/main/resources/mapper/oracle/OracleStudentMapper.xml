@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<!-- <mapper namespace="com.springboot.demo.dao.OracleStudentMapper">
+	<select id="getAllStudentsBatis" resultType="java.util.Map">
+		select * from student
+	</select>
+</mapper> -->
+<mapper namespace="com.springboot.demo.dao.SysLogMapper">
+	<insert id="saveSysLog" parameterType="com.springboot.demo.bean.SysLog">
+		insert into SysLog (id,username,operation,time,method,params,ip,create_time)  
+		values(seq_sys_log.nextval,#{username},#{operation},#{time},#{method},#{params},#{ip},#{createTime})
+	</insert>
+
+</mapper>
